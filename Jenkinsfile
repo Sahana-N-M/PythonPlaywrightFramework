@@ -11,7 +11,7 @@ pipeline {
 
         stage('Create Virtual Environment') {
             steps {
-                bat '"C:\Users\sahana.nm\AppData\Local\Python\pythoncore-3.14-64\python.exe" -m venv venv'
+                bat '"C:\\Users\\sahana.nm\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe" -m venv venv'
             }
         }
 
