@@ -9,9 +9,14 @@ pipeline {
             }
         }
 
+        stage('Create Virtual Environment') {
+            steps {
+                bat '"C:\Users\sahana.nm\AppData\Local\Python\pythoncore-3.14-64\python.exe" -m venv venv'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                bat 'python -m venv venv'
                 bat 'venv\\Scripts\\pip install -r requirements.txt'
                 bat 'venv\\Scripts\\playwright install'
             }
